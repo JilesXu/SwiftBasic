@@ -15,6 +15,7 @@
 		078524541E07D46700162CEF /* swiftBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078524531E07D46700162CEF /* swiftBasicTests.swift */; };
 		0785245F1E07D46700162CEF /* swiftBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785245E1E07D46700162CEF /* swiftBasicUITests.swift */; };
 		0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785246D1E07D50600162CEF /* BlockViewController.swift */; };
+		07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0785245E1E07D46700162CEF /* swiftBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBasicUITests.swift; sourceTree = "<group>"; };
 		078524601E07D46700162CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0785246D1E07D50600162CEF /* BlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockViewController.swift; path = "闭包/BlockViewController.swift"; sourceTree = "<group>"; };
+		07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockSecondViewController.swift; path = "闭包/BlockSecondViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0785246D1E07D50600162CEF /* BlockViewController.swift */,
+				07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */,
 			);
 			name = "闭包";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */,
 				078524411E07D46700162CEF /* ViewController.swift in Sources */,
 				0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */,
 				0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */,
@@ -526,6 +530,7 @@
 				078524651E07D46700162CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078524661E07D46700162CEF /* Build configuration list for PBXNativeTarget "swiftBasicTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				078524681E07D46700162CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078524691E07D46700162CEF /* Build configuration list for PBXNativeTarget "swiftBasicUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				0785246B1E07D46700162CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

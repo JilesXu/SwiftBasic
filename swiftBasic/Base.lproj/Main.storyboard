@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7pi-Au-kxf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rey-i1-HUx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,6 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="22" y="36"/>
         </scene>
         <!--Block View Controller-->
         <scene sceneID="bFW-sw-AcA">
@@ -55,12 +56,82 @@
                     <view key="view" contentMode="scaleToFill" id="NZ7-Jq-d0d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMr-rx-GMb">
+                                <rect key="frame" x="100" y="164" width="175" height="30"/>
+                                <state key="normal" title="Go secondViewController"/>
+                                <connections>
+                                    <action selector="goSecondViewBtnPressed:" destination="7pi-Au-kxf" eventType="touchUpInside" id="gvG-HR-Qpv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示second中输入的值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lah-l8-JF8">
+                                <rect key="frame" x="98" y="114" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lah-l8-JF8" firstAttribute="centerX" secondItem="NZ7-Jq-d0d" secondAttribute="centerX" id="PtJ-Pp-ozG"/>
+                            <constraint firstItem="lah-l8-JF8" firstAttribute="top" secondItem="eTx-5d-RHO" secondAttribute="bottom" constant="50" id="WZg-wA-6uN"/>
+                            <constraint firstItem="sMr-rx-GMb" firstAttribute="centerX" secondItem="NZ7-Jq-d0d" secondAttribute="centerX" id="aLa-GH-o8f"/>
+                            <constraint firstItem="sMr-rx-GMb" firstAttribute="top" secondItem="eTx-5d-RHO" secondAttribute="bottom" constant="100" id="aQv-h2-xcE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="showTextLabel" destination="lah-l8-JF8" id="faQ-Qi-QAU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lv-gX-Cr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="136"/>
+            <point key="canvasLocation" x="980" y="36"/>
+        </scene>
+        <!--Block Second View Controller-->
+        <scene sceneID="Y9b-7g-nMU">
+            <objects>
+                <viewController storyboardIdentifier="BlockSecondViewController" id="3q5-5d-3C3" customClass="BlockSecondViewController" customModule="swiftBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ct7-pV-XJ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="dX5-SI-VYv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZxD-hD-328">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-9w-kJL">
+                                <rect key="frame" x="137.5" y="70" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="uV4-0P-9Qt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-ky-B5l">
+                                <rect key="frame" x="170" y="150" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="3q5-5d-3C3" eventType="touchUpInside" id="4rf-0w-Ej8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pTz-9w-kJL" firstAttribute="top" secondItem="Ct7-pV-XJ3" secondAttribute="bottom" constant="50" id="1Yw-Bl-SXr"/>
+                            <constraint firstItem="NC3-ky-B5l" firstAttribute="top" secondItem="pTz-9w-kJL" secondAttribute="bottom" constant="50" id="3MZ-zP-l4w"/>
+                            <constraint firstItem="pTz-9w-kJL" firstAttribute="centerX" secondItem="ZxD-hD-328" secondAttribute="centerX" id="Cav-fj-BAC"/>
+                            <constraint firstItem="NC3-ky-B5l" firstAttribute="centerX" secondItem="ZxD-hD-328" secondAttribute="centerX" id="uuk-qN-xQq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backToFirstViewControllerButton" destination="NC3-ky-B5l" id="eY8-zj-lxS"/>
+                        <outlet property="textField" destination="pTz-9w-kJL" id="eeh-Yi-UiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJD-zQ-0v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OBD-xR-etG">

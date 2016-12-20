@@ -113,7 +113,22 @@ class BlockViewController: UIViewController {
         })
         print(array)
         
-        let sortNames = names.sorted()
-        print(sortNames)
+        var myClosure : ((Int, Int) -> Int)?
+        myClosure = { (num1:Int, num2:Int) -> Int in
+            return num1 + num2
+        }
+        print(myClosure!(1, 2))
+        
+    }
+    
+    ///闭包传值
+    @IBOutlet var showTextLabel: UILabel!
+    @IBAction func goSecondViewBtnPressed(_ sender: UIButton) {
+        let secondVC =  UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BlockSecondViewController") as! BlockSecondViewController
+        secondVC.setBackClosure(tempClosure: {
+            (inputText:String)->Void in
+            self.showTextLabel.text = inputText
+        })
+        self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
