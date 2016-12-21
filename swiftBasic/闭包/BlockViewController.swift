@@ -125,10 +125,16 @@ class BlockViewController: UIViewController {
     @IBOutlet var showTextLabel: UILabel!
     @IBAction func goSecondViewBtnPressed(_ sender: UIButton) {
         let secondVC =  UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BlockSecondViewController") as! BlockSecondViewController
-        secondVC.setBackClosure(tempClosure: {
+        //正常闭包
+//        secondVC.setBackClosure(tempClosure: {
+//            (inputText:String)->Void in
+//            self.showTextLabel.text = inputText
+//        })
+        //尾随闭包
+        secondVC.setBackClosure() {
             (inputText:String)->Void in
             self.showTextLabel.text = inputText
-        })
+        }
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
