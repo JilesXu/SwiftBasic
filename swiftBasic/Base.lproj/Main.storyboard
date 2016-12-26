@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DelegateCell" rowHeight="100" id="Nq0-3H-2Ah" customClass="DelegateTableViewCell" customModule="swiftBasic" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DelegateCell" rowHeight="100" id="Nq0-3H-2Ah" customClass="DelegateTableViewCell" customModule="swiftBasic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nq0-3H-2Ah" id="bWh-dT-CiL">
@@ -210,6 +210,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJD-zQ-0v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1766" y="36"/>
+        </scene>
+        <!--Delegate Edit View Controller-->
+        <scene sceneID="HuH-qQ-cQV">
+            <objects>
+                <viewController storyboardIdentifier="DelegateEditViewController" id="Csj-1N-DHg" customClass="DelegateEditViewController" customModule="swiftBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hs-Dj-jNq"/>
+                        <viewControllerLayoutGuide type="bottom" id="eji-qi-yXv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E0r-NY-xmI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xc-te-4xq">
+                                <rect key="frame" x="139" y="105" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ouQ-w0-owA"/>
+                                    <constraint firstAttribute="height" constant="30" id="xfc-Zu-sTN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1xc-te-4xq" firstAttribute="centerX" secondItem="E0r-NY-xmI" secondAttribute="centerX" id="BpS-vE-byn"/>
+                            <constraint firstItem="1xc-te-4xq" firstAttribute="top" secondItem="1hs-Dj-jNq" secondAttribute="bottom" constant="85" id="siJ-bl-TDq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="1xc-te-4xq" id="ys8-kd-SYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T56-S1-hz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OBD-xR-etG">

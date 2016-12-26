@@ -118,7 +118,6 @@ class BlockViewController: UIViewController {
             return num1 + num2
         }
         print(myClosure!(1, 2))
-        
     }
     
     ///闭包传值

@@ -17,6 +17,7 @@
 		078524541E07D46700162CEF /* swiftBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078524531E07D46700162CEF /* swiftBasicTests.swift */; };
 		0785245F1E07D46700162CEF /* swiftBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785245E1E07D46700162CEF /* swiftBasicUITests.swift */; };
 		0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785246D1E07D50600162CEF /* BlockViewController.swift */; };
+		07B019061E116C4800B3E1DB /* DelegateEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B019051E116C4800B3E1DB /* DelegateEditViewController.swift */; };
 		07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		0785245E1E07D46700162CEF /* swiftBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBasicUITests.swift; sourceTree = "<group>"; };
 		078524601E07D46700162CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0785246D1E07D50600162CEF /* BlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockViewController.swift; path = "闭包/BlockViewController.swift"; sourceTree = "<group>"; };
+		07B019051E116C4800B3E1DB /* DelegateEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateEditViewController.swift; path = "协议代理/DelegateEditViewController.swift"; sourceTree = "<group>"; };
 		07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockSecondViewController.swift; path = "闭包/BlockSecondViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 			children = (
 				0714E6201E0C01240092787D /* DelegateViewController.swift */,
 				0714E6221E0C01FF0092787D /* DelegateTableViewCell.swift */,
+				07B019051E116C4800B3E1DB /* DelegateEditViewController.swift */,
 			);
 			name = "协议代理";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */,
 				078524411E07D46700162CEF /* ViewController.swift in Sources */,
 				0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */,
+				07B019061E116C4800B3E1DB /* DelegateEditViewController.swift in Sources */,
 				0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */,
 				0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */,
 			);
