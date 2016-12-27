@@ -48,25 +48,24 @@ class DelegateViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if currentSelectCell != nil {
             print(currentSelectCell!.myLabel.text!)
-            editViewController.personOldName? = currentSelectCell!.myLabel.text!
-        
+            
+            editViewController.personOldName = currentSelectCell!.myLabel.text!
+            print(editViewController.personOldName)
         self.navigationController?.pushViewController(editViewController, animated: true)
         }
     }
     
     public func fetchPersonName(name: String) {
-        
         if selectIndexPath != nil {
             //获取当前点击Cell的索引
             let index = (selectIndexPath?.row)!
-            
+            print(self.dataSource!)
             //更新数据源中相应的数据
-            self.dataSource![index][name] = name
+            self.dataSource![index]["name"] = name
             
             //重载TableView
             self.myTableView.reloadData()
         }
-        
     }
     
     public func createDataSource() {
