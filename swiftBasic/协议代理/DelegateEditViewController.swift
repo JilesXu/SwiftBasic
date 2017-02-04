@@ -19,6 +19,9 @@ class DelegateEditViewController: UIViewController {
     var personOldName:String?
     var delegate: EditViewControllerDelegate?
     
+    typealias InputClosureType = (String)->Void
+    var backClosure: InputClosureType?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.personOldName != nil {
@@ -30,14 +33,27 @@ class DelegateEditViewController: UIViewController {
     
     public func backToPreview() -> Void {
         let name:String! = self.textField.text
-        if  name != "" {
-            if delegate != nil {
-                delegate!.fetchPersonName(name: name)
+        
+        /*****方法一：协议代理*****/
+//        if  name != "" {
+//            if delegate != nil {
+//                delegate!.fetchPersonName(name: name)
+//            }
+//        }
+        /*****方法二：闭包*****/
+        if self.backClosure != nil {
+            if name != nil {
+                backClosure!(name)
             }
         }
+        
         self.navigationController!.popViewController(animated: true)
     }
-
+    
+    public func setNameByClosureType(inputClosure: @escaping InputClosureType) {
+        self.backClosure = inputClosure
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

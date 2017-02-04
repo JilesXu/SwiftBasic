@@ -44,13 +44,19 @@ class DelegateViewController: UIViewController, UITableViewDataSource, UITableVi
         let currentSelectCell: DelegateTableViewCell? = self.myTableView.cellForRow(at: selectIndexPath!) as? DelegateTableViewCell
         let editViewController: DelegateEditViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DelegateEditViewController") as! DelegateEditViewController
         
-        editViewController.delegate = self
+        /*****方法一：协议代理*****/
+//        editViewController.delegate = self
+        
+        /*****方法二：闭包*****/
+        editViewController.setNameByClosureType(inputClosure: {
+            (inputText: String) -> Void in
+            self.fetchPersonName(name: inputText)
+        })
         
         if currentSelectCell != nil {
             print(currentSelectCell!.myLabel.text!)
             
             editViewController.personOldName = currentSelectCell!.myLabel.text!
-            print(editViewController.personOldName)
         self.navigationController?.pushViewController(editViewController, animated: true)
         }
     }
