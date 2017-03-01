@@ -19,6 +19,7 @@
 		0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785246D1E07D50600162CEF /* BlockViewController.swift */; };
 		07B019061E116C4800B3E1DB /* DelegateEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B019051E116C4800B3E1DB /* DelegateEditViewController.swift */; };
 		07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */; };
+		07FE7E861E471EC500AF689C /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE7E851E471EC500AF689C /* ThreadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0785246D1E07D50600162CEF /* BlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockViewController.swift; path = "闭包/BlockViewController.swift"; sourceTree = "<group>"; };
 		07B019051E116C4800B3E1DB /* DelegateEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateEditViewController.swift; path = "协议代理/DelegateEditViewController.swift"; sourceTree = "<group>"; };
 		07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockSecondViewController.swift; path = "闭包/BlockSecondViewController.swift"; sourceTree = "<group>"; };
+		07FE7E851E471EC500AF689C /* ThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadViewController.swift; path = "多线程/ThreadViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		0785243D1E07D46700162CEF /* swiftBasic */ = {
 			isa = PBXGroup;
 			children = (
+				07FE7E841E471DE400AF689C /* 多线程 */,
 				0714E61F1E0C01000092787D /* 协议代理 */,
 				0785246C1E07D48D00162CEF /* 闭包 */,
 				0785243E1E07D46700162CEF /* AppDelegate.swift */,
@@ -154,6 +157,14 @@
 				07D4FA031E08C58300B51422 /* BlockSecondViewController.swift */,
 			);
 			name = "闭包";
+			sourceTree = "<group>";
+		};
+		07FE7E841E471DE400AF689C /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				07FE7E851E471EC500AF689C /* ThreadViewController.swift */,
+			);
+			name = "多线程";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 				07D4FA041E08C58300B51422 /* BlockSecondViewController.swift in Sources */,
 				078524411E07D46700162CEF /* ViewController.swift in Sources */,
 				0785246E1E07D50600162CEF /* BlockViewController.swift in Sources */,
+				07FE7E861E471EC500AF689C /* ThreadViewController.swift in Sources */,
 				07B019061E116C4800B3E1DB /* DelegateEditViewController.swift in Sources */,
 				0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */,
 				0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */,
