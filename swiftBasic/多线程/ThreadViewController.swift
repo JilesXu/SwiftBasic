@@ -62,12 +62,77 @@ class ThreadViewController: UIViewController {
 //        }
 //        print("之后**********/\(Thread.current)")
         //第五点：延时执行
-        let delay = DispatchTime.now() + 5
+//        let delay = DispatchTime.now() + 5
+//        
+//        DispatchQueue.main.asyncAfter(deadline: delay) {
+//            print(Thread.current)
+//            print("hello world")
+//        }
+        //第六点：队列组
+//        let group = DispatchGroup.init()
+//        let queue5 = DispatchQueue.global()
+//        
+//        queue5.async(group: group, qos: .default) { 
+//            for _ in 0..<3 {
+//                NSLog("group-01 - %@", Thread.current)
+//            }
+//        }
+//        DispatchQueue.main.async(group: group) { 
+//            for _ in 0..<2 {
+//                NSLog("group-02 - %@", Thread.current)
+//            }
+//        }
+//        group.notify(queue: DispatchQueue.main) { 
+//            print("完成*****\(Thread.current)")
+//        }
+        //NSBlockOperation
+//        let operation = BlockOperation.init { 
+//            print(Thread.current)
+//        }
+//        for i in 0..<5 {
+//            operation.addExecutionBlock {
+//                print("第\(i)次*****\(Thread.current)")
+//            }
+//        }
+//        
+//        operation.start()
         
-        DispatchQueue.main.asyncAfter(deadline: delay) {
-            print(Thread.current)
-            print("hello world")
+        //第七点：创建队列 主队列
+//        let queue6 = OperationQueue.main
+        //第八点：其他队列
+//        let queue = OperationQueue()
+//    
+//        let operation = BlockOperation.init { 
+//            print(Thread.current)
+//        }
+//        for i in 0..<5 {
+//            operation.addExecutionBlock { () -> Void in
+//                print("第\(i)次 - \(Thread.current)")
+//            }
+//        }
+//        queue.addOperation(operation)
+        
+        let queue7 = OperationQueue.init()
+        let operation1 = BlockOperation.init { 
+            print("下载图片")
+            Thread.sleep(forTimeInterval: 1.0)
         }
+        
+        let operation2 = BlockOperation.init { 
+            print("打水印")
+            Thread.sleep(forTimeInterval: 1.0)
+        }
+        
+        let operation3 = BlockOperation.init { 
+            print("上传图片")
+            Thread.sleep(forTimeInterval: 1.0)
+        }
+        
+        operation2.addDependency(operation1)
+        operation3.addDependency(operation2)
+        
+        queue7.addOperations([operation1, operation2, operation3], waitUntilFinished: false)
+        
     }
     public func run() {
         print(Thread.current)
