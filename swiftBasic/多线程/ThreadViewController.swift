@@ -112,26 +112,50 @@ class ThreadViewController: UIViewController {
 //        }
 //        queue.addOperation(operation)
         
-        let queue7 = OperationQueue.init()
-        let operation1 = BlockOperation.init { 
-            print("下载图片")
-            Thread.sleep(forTimeInterval: 1.0)
-        }
+//        let queue7 = OperationQueue.init()
+//        let operation1 = BlockOperation.init { 
+//            print("下载图片")
+//            Thread.sleep(forTimeInterval: 1.0)
+//        }
+//        
+//        let operation2 = BlockOperation.init { 
+//            print("打水印")
+//            Thread.sleep(forTimeInterval: 1.0)
+//        }
+//        
+//        let operation3 = BlockOperation.init { 
+//            print("上传图片")
+//            Thread.sleep(forTimeInterval: 1.0)
+//        }
+//        
+//        operation2.addDependency(operation1)
+//        operation3.addDependency(operation2)
+//        
+//        queue7.addOperations([operation1, operation2, operation3], waitUntilFinished: false)
         
-        let operation2 = BlockOperation.init { 
-            print("打水印")
-            Thread.sleep(forTimeInterval: 1.0)
-        }
+        //第九点：线程同步
+//        var lastTicket: NSInteger = 10
+//        
+//        let queue7 = DispatchQueue.global()
+//        queue7.sync {
+//            var ticket: NSInteger = lastTicket
+//            [Thread .sleep(forTimeInterval: 0.1)]
+//            print("\(ticket) - \([Thread .current])");
+//            ticket -= 1;
+//            lastTicket = ticket;
+//        }
         
-        let operation3 = BlockOperation.init { 
-            print("上传图片")
-            Thread.sleep(forTimeInterval: 1.0)
-        }
-        
-        operation2.addDependency(operation1)
-        operation3.addDependency(operation2)
-        
-        queue7.addOperations([operation1, operation2, operation3], waitUntilFinished: false)
+//        var lastTicket: NSInteger = 10
+//        let queue8 = OperationQueue.init()
+//        let operation = BlockOperation.init {
+//            var ticket: NSInteger = lastTicket
+//            [Thread .sleep(forTimeInterval: 0.1)]
+//            print("\(ticket) - \([Thread .current])");
+//            ticket -= 1;
+//            lastTicket = ticket;
+//            let tool = Tool.shareTool
+//        }
+//        queue8.addOperations([operation], waitUntilFinished: true)
         
     }
     public func run() {
