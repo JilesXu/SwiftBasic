@@ -10,6 +10,7 @@
 		0714E6211E0C01240092787D /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714E6201E0C01240092787D /* DelegateViewController.swift */; };
 		0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714E6221E0C01FF0092787D /* DelegateTableViewCell.swift */; };
 		072274811E6C68A000DD24D3 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072274801E6C68A000DD24D3 /* Tool.swift */; };
+		07685AB31E7444CD008FEBF4 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07685AB21E7444CD008FEBF4 /* AnimationViewController.swift */; };
 		0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785243E1E07D46700162CEF /* AppDelegate.swift */; };
 		078524411E07D46700162CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078524401E07D46700162CEF /* ViewController.swift */; };
 		078524441E07D46700162CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078524421E07D46700162CEF /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		0714E6201E0C01240092787D /* DelegateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateViewController.swift; path = "协议代理/DelegateViewController.swift"; sourceTree = "<group>"; };
 		0714E6221E0C01FF0092787D /* DelegateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateTableViewCell.swift; path = "协议代理/DelegateTableViewCell.swift"; sourceTree = "<group>"; };
 		072274801E6C68A000DD24D3 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = "多线程/Tool.swift"; sourceTree = "<group>"; };
+		07685AB21E7444CD008FEBF4 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationViewController.swift; path = "动画/AnimationViewController.swift"; sourceTree = "<group>"; };
 		0785243B1E07D46700162CEF /* swiftBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0785243E1E07D46700162CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		078524401E07D46700162CEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			name = "协议代理";
 			sourceTree = "<group>";
 		};
+		07685AB41E7444D4008FEBF4 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				07685AB21E7444CD008FEBF4 /* AnimationViewController.swift */,
+			);
+			name = "动画";
+			sourceTree = "<group>";
+		};
 		078524321E07D46700162CEF = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		0785243D1E07D46700162CEF /* swiftBasic */ = {
 			isa = PBXGroup;
 			children = (
+				07685AB41E7444D4008FEBF4 /* 动画 */,
 				07FE7E841E471DE400AF689C /* 多线程 */,
 				0714E61F1E0C01000092787D /* 协议代理 */,
 				0785246C1E07D48D00162CEF /* 闭包 */,
@@ -314,6 +325,7 @@
 				07FE7E861E471EC500AF689C /* ThreadViewController.swift in Sources */,
 				07B019061E116C4800B3E1DB /* DelegateEditViewController.swift in Sources */,
 				072274811E6C68A000DD24D3 /* Tool.swift in Sources */,
+				07685AB31E7444CD008FEBF4 /* AnimationViewController.swift in Sources */,
 				0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */,
 				0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */,
 			);
