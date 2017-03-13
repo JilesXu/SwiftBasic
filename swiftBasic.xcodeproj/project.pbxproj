@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07126D9F1E76F32B00C3DECB /* SecAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07126D9E1E76F32B00C3DECB /* SecAnimationViewController.swift */; };
 		0714E6211E0C01240092787D /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714E6201E0C01240092787D /* DelegateViewController.swift */; };
 		0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714E6221E0C01FF0092787D /* DelegateTableViewCell.swift */; };
 		072274811E6C68A000DD24D3 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072274801E6C68A000DD24D3 /* Tool.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07126D9E1E76F32B00C3DECB /* SecAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecAnimationViewController.swift; path = "动画/SecAnimationViewController.swift"; sourceTree = "<group>"; };
 		0714E6201E0C01240092787D /* DelegateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateViewController.swift; path = "协议代理/DelegateViewController.swift"; sourceTree = "<group>"; };
 		0714E6221E0C01FF0092787D /* DelegateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateTableViewCell.swift; path = "协议代理/DelegateTableViewCell.swift"; sourceTree = "<group>"; };
 		072274801E6C68A000DD24D3 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = "多线程/Tool.swift"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				07685AB21E7444CD008FEBF4 /* AnimationViewController.swift */,
+				07126D9E1E76F32B00C3DECB /* SecAnimationViewController.swift */,
 			);
 			name = "动画";
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				072274811E6C68A000DD24D3 /* Tool.swift in Sources */,
 				07685AB31E7444CD008FEBF4 /* AnimationViewController.swift in Sources */,
 				0714E6231E0C01FF0092787D /* DelegateTableViewCell.swift in Sources */,
+				07126D9F1E76F32B00C3DECB /* SecAnimationViewController.swift in Sources */,
 				0785243F1E07D46700162CEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
