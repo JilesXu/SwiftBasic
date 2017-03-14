@@ -13,6 +13,7 @@ class AnimationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(myView)
         view.addSubview(userTF)
         view.addSubview(pswTF)
         view.addSubview(nextBtn)
@@ -43,7 +44,9 @@ class AnimationViewController: UIViewController {
             
         }
         
-        UIView.transition(from: self.userTF, to: self.pswTF, duration: 0.5, options: .transitionCrossDissolve) { (true) in
+        UIView.transition(with: self.myView, duration: 2, options: .transitionFlipFromBottom, animations: { 
+            
+        }) { (true) in
             
         }
     }
@@ -73,5 +76,11 @@ class AnimationViewController: UIViewController {
         nextBtn.setTitle("下一页", for: UIControlState.normal)
         nextBtn.addTarget(self, action: #selector(nextBtnPressed), for: UIControlEvents.touchUpInside)
         return nextBtn
+    }()
+    
+    lazy var myView: UIView = {
+        var myView: UIView = UIView.init(frame: CGRect.init(x: 0, y: 300, width: 100, height: 50))
+        myView.backgroundColor = UIColor.green
+        return myView
     }()
 }
