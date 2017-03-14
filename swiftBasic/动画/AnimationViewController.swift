@@ -15,6 +15,7 @@ class AnimationViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(userTF)
         view.addSubview(pswTF)
+        view.addSubview(nextBtn)
         
         let viewBGCenter = self .view.center.x
         var accountCenter = self.userTF.center
@@ -34,11 +35,23 @@ class AnimationViewController: UIViewController {
         }) { (true) in
             self.pswTF.placeholder = "密码"
         }
+        
+        UIView.animate(withDuration: 0.4, delay: 1, options: .curveEaseOut, animations: { 
+            self.userTF.frame.size = CGSize.init(width: 300, height: 100)
+            self.userTF.center = self.view.center
+        }) { (true) in
+            
+        }
+        
+        UIView.transition(from: self.userTF, to: self.pswTF, duration: 0.5, options: .transitionCrossDissolve) { (true) in
+            
+        }
     }
     
     //MARK: -Events
-    func nextBtn(sender: UIButton) -> Void {
-        
+    func nextBtnPressed(sender: UIButton) -> Void {
+        let viewContoller: SecAnimationViewController = SecAnimationViewController()
+        self.navigationController?.pushViewController(viewContoller, animated: true)
     }
     
     //MARK: -Setter And Getter
@@ -55,9 +68,10 @@ class AnimationViewController: UIViewController {
     }()
     
     lazy var nextBtn: UIButton = {
-        var nextBtn: UIButton = UIButton.init(frame: CGRect.init(x: 0, y: 200, width: 100, height: 50))
+        var nextBtn: UIButton = UIButton.init(frame: CGRect.init(x: 100, y: 400, width: 250, height: 100))
+        nextBtn.backgroundColor = UIColor.red
         nextBtn.setTitle("下一页", for: UIControlState.normal)
-        nextBtn.addTarget(self(), action: #selector(<#T##@objc method#>), for: UIControlEvents.touchUpInside)
+        nextBtn.addTarget(self, action: #selector(nextBtnPressed), for: UIControlEvents.touchUpInside)
         return nextBtn
     }()
 }
